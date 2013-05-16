@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+
+<beans>
+   
+  
+   <bean id="zk.online-edition.resources" class="org.springframework.extensions.surf.util.ResourceBundleBootstrapComponent">
+      <property name="resourceBundles">
+         <list>
+            <value>alfresco.messages.zk-online-edition</value>
+         </list>
+      </property>
+   </bean>
+   
+	 <bean id="zk.evaluator.doclib.action.onlineEditMimetype" parent="evaluator.doclib.action.isMimetype">
+      <property name="mimetypes">
+         <list>
+            <value>application/vnd.ms-excel</value>
+            <value>application/vnd.ms-powerpoint</value>
+            <value>application/msword</value>
+            <value>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</value>
+            <value>application/vnd.openxmlformats-officedocument.presentationml.presentation</value>
+            <value>application/vnd.openxmlformats-officedocument.wordprocessingml.document</value>
+            <value>application/vnd.ms-word.document.macroenabled.12</value>
+            <value>application/vnd.ms-word.template.macroenabled.12</value>
+            <value>application/vnd.ms-excel.sheet.macroenabled.12</value>
+            <value>application/vnd.ms-excel.template.macroenabled.12</value>
+            <value>application/vnd.ms-powerpoint.presentation.macroenabled.12</value>
+            <value>application/vnd.ms-powerpoint.template.macroenabled.12</value>
+            <value>application/vnd.visio</value>
+            <value>application/vnd.oasis.opendocument.text</value>
+            <value>application/vnd.oasis.opendocument.text-template</value>
+            <value>application/vnd.oasis.opendocument.presentation</value>
+            <value>application/vnd.oasis.opendocument.presentation-template</value>             
+            <value>application/vnd.oasis.opendocument.spreadsheet</value>
+            <value>application/vnd.oasis.opendocument.spreadsheet-template</value>
+            <value>application/vnd.sun.xml.writer</value>
+            <value>application/vnd.sun.xml.calc</value>
+            <value>application/vnd.sun.xml.impress</value>
+            <value>application/vnd.sun.xml.draw</value>
+         </list>
+      </property>
+     
+   </bean>
+   
+   
+</beans>
