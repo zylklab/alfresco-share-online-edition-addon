@@ -43,5 +43,15 @@
      
    </bean>
    
+   	<bean id="zk-online-edition.config.bootstrap" class="org.springframework.extensions.config.ConfigBootstrap"
+		init-method="register" depends-on="webframework.configsource">
+		<property name="configService" ref="web.config" />
+		<property name="configs">
+			<list>
+				<value>classpath:alfresco/web-extension/zk-online-edition-config-custom.xml</value>
+			</list>
+		</property>
+	</bean>
+   
    
 </beans>
