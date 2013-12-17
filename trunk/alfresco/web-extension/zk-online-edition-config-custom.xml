@@ -1,0 +1,34 @@
+<alfresco-config>
+
+	<config evaluator="string-compare" condition="DocLibCustom">   
+      <dependencies> 
+            	<js src="components/online-edition/zk-online-edition-actions.js" />
+      </dependencies> 
+    </config>
+	
+		 
+	 <config evaluator="string-compare" condition="DocLibActions">
+		<actions>
+			<action id="zk-online-edition" type="javascript"
+				label="zk.label.online.edition" icon="document-edit-online">				
+				<param name="function">onActionZKEditOnline</param>				
+				<permissions>
+               		<permission allow="true">Write</permission>
+            	</permissions>
+				<evaluator>zk.evaluator.doclib.action.onlineEditMimetype</evaluator>
+			</action>
+		</actions>
+
+		<actionGroups>
+			<actionGroup id="document-browse">
+				<action index="105" id="zk-online-edition" />
+			</actionGroup>
+			<actionGroup id="document-details">
+				<action index="105" id="zk-online-edition" />
+			</actionGroup>
+		
+		</actionGroups>
+
+	</config>
+
+</alfresco-config>   
