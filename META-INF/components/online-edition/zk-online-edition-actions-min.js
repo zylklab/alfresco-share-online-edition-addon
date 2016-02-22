@@ -1,1 +1,1 @@
-(function(){YAHOO.Bubbling.fire("registerAction",{actionName:"onActionZKEditOnline",fn:function(t){var n="dav";if(window.location.protocol.indexOf("https")!=-1){n="davs"}webdavPath=n+"://"+window.location.host+"/alfresco"+t.webdavUrl;window.location=webdavPath}})})()
+(function(){YAHOO.Bubbling.fire("registerAction",{actionName:"onActionZKEditOnline",fn:function(t){var n="vnd.sun.star.webdav";if(window.location.protocol.indexOf("https")!=-1){n="vnd.sun.star.webdavs"}webdavPath=n+"://"+window.location.host+"/alfresco"+t.webdavUrl;window.location=webdavPath}})})()
