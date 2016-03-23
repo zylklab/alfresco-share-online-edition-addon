@@ -12,6 +12,14 @@ Version 0.2
 
 https://github.com/CesarCapillas/alfresco-share-online-edition-addon/releases
 
+## Packaging
+
+You can pack it with jar command. Go into the directory that you unzipped, or cloned via git:
+
+$ git clone https://github.com/CesarCapillas/alfresco-share-online-edition-addon
+$ cd alfresco-share-online-edition-addon
+$ jar -cf alfresco-share-online-edition.jar *
+
 ## Installation
 
 Install it, copying the corresponding jar into $TOMCAT/shared/lib and restart Alfresco service. Then you will need to register the protocol in Windows or Linux according instrucctions and scripts.
