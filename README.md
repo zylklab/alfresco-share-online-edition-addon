@@ -14,11 +14,13 @@ https://github.com/CesarCapillas/alfresco-share-online-edition-addon/releases
 
 ## Packaging
 
-You can pack it with jar command. Go into the directory that you unzipped, or cloned via git:
+You may pack it with jar command. Go into the directory that you unzipped, or cloned via git:
 
     $ git clone https://github.com/CesarCapillas/alfresco-share-online-edition-addon
     $ cd alfresco-share-online-edition-addon
     $ jar -cf alfresco-share-online-edition.jar *
+
+You also may download it from releases page.
 
 ## Installation
 
