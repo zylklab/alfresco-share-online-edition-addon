@@ -1,6 +1,6 @@
-# Online edition with Libreoffice in Alfresco
+# Online edition with Libreoffice in Alfresco Share
 
-Alfresco Share addon for online edition by Zylk provides webdav links for online edition for Office and MS-Office mimetypes.
+Alfresco Share addon for online edition by Zylk provides webdav links for online edition for LibreOffice/OpenOffice and MS-Office mimetypes.
 
 ## Releases 
 
