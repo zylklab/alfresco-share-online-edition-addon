@@ -12,10 +12,14 @@
 			<action id="zk-online-edition" type="javascript"
 				label="zk.label.online.edition" icon="document-edit-online">				
 				<param name="function">onActionZKEditOnline</param>				
-				<permissions>
-               		<permission allow="true">Write</permission>
-            	</permissions>
-				<evaluator>zk.evaluator.doclib.action.onlineEditMimetype</evaluator>
+                                <permissions>
+                                        <permission allow="true">Write</permission>
+                                </permissions>
+                                <evaluator>evaluator.doclib.action.editableByCurrentUser</evaluator>
+                                <evaluator negate="true">evaluator.doclib.action.isLocked</evaluator>
+                                <evaluator>evaluator.doclib.action.isNotWorkingCopy</evaluator>
+                                <evaluator>evaluator.doclib.action.notCheckedOutAspect</evaluator>
+                                <evaluator>zk.evaluator.doclib.action.onlineEditMimetype</evaluator>
 			</action>
 		</actions>
 
