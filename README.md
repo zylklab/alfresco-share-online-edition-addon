@@ -43,3 +43,7 @@ http://www.zylk.net/es/web/guest/web-2-0/blog/-/blogs/online-edition-with-libreo
 ### MacOSX
  * Not working in MacOSX. More info at:
   * https://github.com/CesarCapillas/alfresco-share-online-edition-addon/issues/6
+
+### Authors
+ * Patricia Yague
+ * Cesar Capillas
