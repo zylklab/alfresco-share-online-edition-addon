@@ -1,0 +1,71 @@
+<!-- 
+
+***
+***
+*** build.xml
+***
+*** Ant file for simple tasks for packaging and deploying Alfresco jar module in $ALF_HOME/shared/lib
+***
+***
+***
+
+-->
+<project default="package">
+
+    <target name="init">
+    	<!-- module name and version-->
+        <basename property="module_name" file="${user.dir}"/> 
+   		<!-- <property name="module_name" value="" /> -->
+    	<property name="ver_num" value="-v1.0" />
+
+    	<!-- alfresco local environment -->
+    	<property name="alfresco_home" value="/opt/alfresco512" />
+   		<property name="shared_lib" value="${alfresco_home}/tomcat/shared/lib" />
+    </target>
+
+	<target name="clean" depends="init">
+		<delete dir="./target" quiet="true"/>
+	</target>
+
+	<target name="jar" depends="init">
+		 <mkdir dir="./target" />
+		 <jar destfile="./target/${module_name}${ver_num}.jar"
+		      basedir="."
+		      includes="**/*.*"
+		      excludes="build.xml,./target/**"
+		      manifest="./META-INF/MANIFEST.MF"
+		  />
+	</target>
+
+	<target name="package" depends="init,clean,jar">
+		<echo message="Packaged jar in ./target/${module_name}${ver_num}.jar" />
+		<echo message="***********************************************************" />
+	</target>
+
+	<target name="deploy" depends="init,clean,jar,stop-alfresco,copy-to-shared-lib,start-alfresco" />
+
+	<target name="copy-to-shared-lib" depends="init" description="Copy to Shared Lib">
+	    <echo message="Copy ./target/${module_name}${ver_num}.jar to ${shared_lib}" />
+	    <echo message="***********************************************************" />
+	    <copydir src="./target/" dest="${shared_lib}"/>
+    </target>
+
+    <target name="stop-alfresco" depends="init" description="Stop Local Alfresco">
+    	<echo message="Stopping Alfresco ....." />
+    	<echo message="***********************************************************" />
+    	<exec executable="/bin/bash">
+    		<arg value="${alfresco_home}/alfresco.sh"/>
+    		<arg value="stop"/>
+    	</exec>
+  	</target>
+
+  	<target name="start-alfresco" depends="init" description="Start Local Alfresco">
+    	<echo message="Starting Alfresco ....." />
+    	<echo message="***********************************************************" />
+    	<exec executable="/bin/bash">
+      		<arg value="${alfresco_home}/alfresco.sh"/>
+      		<arg value="start"/>
+    	</exec>
+  	</target>
+
+</project>
