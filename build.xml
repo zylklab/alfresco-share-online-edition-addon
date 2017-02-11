@@ -16,7 +16,7 @@
     	<!-- module name and version-->
         <basename property="module_name" file="${user.dir}"/> 
    		<!-- <property name="module_name" value="" /> -->
-    	<property name="ver_num" value="-v1.0" />
+    	<property name="ver_num" value="-v0.3" />
 
     	<!-- alfresco local environment -->
     	<property name="alfresco_home" value="/opt/alfresco512" />
