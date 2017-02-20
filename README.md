@@ -33,20 +33,24 @@ Install it, copying the corresponding jar into $TOMCAT/shared/lib and restart Al
 ### Registering the protocols
 
 ### Windows
- * Wiki:
-  * https://github.com/CesarCapillas/alfresco-share-online-edition-addon/wiki#registering-the-dav-protocol-in-windows
- * Note: You can find a register script for Windows in release page.
+
+Wiki documentation:
+  * https://github.com/zylklab/alfresco-share-online-edition-addon/wiki#registering-the-dav-protocol-in-windows
+ 
+NOTE: You can find a register script for Windows in release page.
 
 ### Linux
- * Wiki: 
-  * https://github.com/CesarCapillas/alfresco-share-online-edition-addon/wiki#registering-the-dav-protocol-in-linux
- * You can register the protocols in Linux with the help of this article:
 
-http://www.zylk.net/es/web/guest/web-2-0/blog/-/blogs/online-edition-with-libreoffice-in-alfresco-5
+Wiki documentation:
+  * https://github.com/zylklab/alfresco-share-online-edition-addon/wiki#registering-the-dav-protocol-in-linux
+  
+NOTE: You can register the protocols in Linux with the help of this article:
+  * http://www.zylk.net/es/web/guest/web-2-0/blog/-/blogs/online-edition-with-libreoffice-in-alfresco-5
 
 ### MacOSX
- * Not working in MacOSX. More info at:
-  * https://github.com/CesarCapillas/alfresco-share-online-edition-addon/issues/6
+
+Not working in MacOSX. More info at:
+  * https://github.com/zylklab/alfresco-share-online-edition-addon/issues/6
 
 ## Authors
  * Patricia Yague
