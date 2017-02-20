@@ -1,6 +1,10 @@
-# Online edition with Libreoffice in Alfresco Share
+# Edit with Libreoffice in Alfresco Share
 
-Alfresco Share addon for online edition by Zylk provides webdav links for online edition for LibreOffice/OpenOffice and MS-Office mimetypes.
+Edit with Libreoffice addon provides a webdav link for online edition of both MS-Office and Libreoffice mimetypes
+
+## Using
+
+![Edit with Libreoffice Action](screenshots/EditWithLibreOffice.png)
 
 ## Releases 
 
@@ -10,7 +14,7 @@ Version 0.3
 Version 0.2
  * For Libreoffice 4.x and Alfresco 4.x, based on dav:// and davs:// url schemes
 
-https://github.com/CesarCapillas/alfresco-share-online-edition-addon/releases
+https://github.com/zylklab/alfresco-share-online-edition-addon/releases
 
 ## Packaging
 
@@ -26,7 +30,7 @@ You also may download it from releases page.
 
 Install it, copying the corresponding jar into $TOMCAT/shared/lib and restart Alfresco service. Then you will need to register the protocol in Windows or Linux according instrucctions and scripts.
 
-## Registering the protocols
+### Registering the protocols
 
 ### Windows
  * Wiki:
