@@ -42,8 +42,8 @@ NOTE: You can find a register script for Windows in release page.
 ### Linux
 
 Wiki documentation:
-  * https://github.com/zylklab/alfresco-share-online-edition-addon/wiki#registering-the-dav-protocol-in-linux
-  
+  * https://github.com/zylklab/alfresco-share-online-edition-addon/wiki#registering-the-dav-protocol-in-linux
+ 
 NOTE: You can register the protocols in Linux with the help of this article:
   * http://www.zylk.net/es/web/guest/web-2-0/blog/-/blogs/online-edition-with-libreoffice-in-alfresco-5
 
