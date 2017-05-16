@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <!--
+     Define beans related to this Share extension here, such as
+      evaluators and resource bootstrapping.
+
+      Note. Any configuration related to the whole Share.war webapp
+            (i.e. not specific to this share extension) should be
+             placed in the tomcat/shared/classes/alfresco/web-extension/custom-slingshot-application-context.xml file
+    -->
+
+    <!-- Add module specific messages and labels -->
+    <bean id="net.zylk.zk-libreoffice-addon-share.resources"
+          class="org.springframework.extensions.surf.util.ResourceBundleBootstrapComponent">
+        <property name="resourceBundles">
+            <list>
+                <value>alfresco.web-extension.messages.zk-libreoffice-addon-share</value>
+            </list>
+        </property>
+    </bean>
+   
+   <bean id="zk.evaluator.doclib.action.onlineEditMimetype" parent="evaluator.doclib.action.isMimetype">
+      <property name="mimetypes">
+         <list>
+            <value>application/vnd.ms-excel</value>
+            <value>application/vnd.ms-powerpoint</value>
+            <value>application/msword</value>
+            <value>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</value>
+            <value>application/vnd.openxmlformats-officedocument.presentationml.presentation</value>
+            <value>application/vnd.openxmlformats-officedocument.wordprocessingml.document</value>
+            <value>application/vnd.ms-word.document.macroenabled.12</value>
+            <value>application/vnd.ms-word.template.macroenabled.12</value>
+            <value>application/vnd.ms-excel.sheet.macroenabled.12</value>
+            <value>application/vnd.ms-excel.template.macroenabled.12</value>
+            <value>application/vnd.ms-powerpoint.presentation.macroenabled.12</value>
+            <value>application/vnd.ms-powerpoint.template.macroenabled.12</value>
+            <value>application/vnd.visio</value>
+            <value>application/vnd.oasis.opendocument.text</value>
+            <value>application/vnd.oasis.opendocument.text-template</value>
+            <value>application/vnd.oasis.opendocument.presentation</value>
+            <value>application/vnd.oasis.opendocument.presentation-template</value>             
+            <value>application/vnd.oasis.opendocument.spreadsheet</value>
+            <value>application/vnd.oasis.opendocument.spreadsheet-template</value>
+            <value>application/vnd.sun.xml.writer</value>
+            <value>application/vnd.sun.xml.calc</value>
+            <value>application/vnd.sun.xml.impress</value>
+            <value>application/vnd.sun.xml.draw</value>
+         </list>
+      </property>
+     
+   </bean>
+   
+    <bean id="zk-online-edition.config.bootstrap" class="org.springframework.extensions.config.ConfigBootstrap"
+    init-method="register" depends-on="webframework.configsource">
+    <property name="configService" ref="web.config" />
+    <property name="configs">
+      <list>
+        <value>classpath:alfresco/web-extension/zk-online-edition-config-custom.xml</value>
+      </list>
+    </property>
+  </bean>
+   
+</beans>
