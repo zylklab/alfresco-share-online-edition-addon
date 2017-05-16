@@ -18,19 +18,24 @@ https://github.com/zylklab/alfresco-share-online-edition-addon/releases
 
 ## Packaging
 
-You may pack it with jar command. Go into the directory that you unzipped, or cloned via git:
+You may pack it with maven. Go into the directory that you unzipped, or cloned via git:
 
-    $ git clone https://github.com/CesarCapillas/alfresco-share-online-edition-addon
+    $ git clone https://github.com/zylklab/alfresco-share-online-edition-addon
     $ cd alfresco-share-online-edition-addon
-    $ jar -cf alfresco-share-online-edition.jar *
+    $ mvn clean
+    $ mvn package -DskipTests=true
 
-You also may download it from releases page.
+You will generate an Alfresco Share AMP package in target directory. 
+
+HINT: You also may download a JAR file from releases page to be deployed in $TOMCAT/shared/lib
 
 ## Installation
 
-Install it, copying the corresponding jar into $TOMCAT/shared/lib and restart Alfresco service. Then you will need to register the protocol in Windows or Linux according instrucctions and scripts.
+ - Just copy the corresponding AMP into $ALF_HOME/amps_share, stop Alfresco service, apply AMPs script ($ALF_HOME/bin/apply_amps.sh). Then start Alfresco service. 
 
 ### Registering the protocols
+
+Finally you will need to register the protocol in Windows or Linux according instrucctions and scripts.
 
 ### Windows
 
